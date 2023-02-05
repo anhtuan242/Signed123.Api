@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Signed123.Api.ServiceInterface\Signed123.Api.ServiceInterface.csproj" />
-    <ProjectReference Include="..\Signed123.Api.ServiceModel\Signed123.Api.ServiceModel.csproj" />
+    <ProjectReference Include="..\Signed123.Api.ServiceModel\Signed123.Features.Api.ServiceModel.csproj" />
 
     <PackageReference Include="NUnit" Version="3.13.*" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.1.*" />

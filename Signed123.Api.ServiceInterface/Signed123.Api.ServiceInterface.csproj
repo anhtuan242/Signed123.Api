@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Signed123.Api.ServiceModel\Signed123.Api.ServiceModel.csproj" />
+    <ProjectReference Include="..\Signed123.Api.ServiceModel\Signed123.Features.Api.ServiceModel.csproj" />
   </ItemGroup>
 
 </Project>
