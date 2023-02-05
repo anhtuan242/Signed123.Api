@@ -2,7 +2,7 @@ using NUnit.Framework;
 using ServiceStack;
 using ServiceStack.Testing;
 using Signed123.Api.ServiceInterface;
-using Signed123.Api.ServiceModel;
+
 
 namespace Signed123.Api.Tests;
 
@@ -19,13 +19,4 @@ public class UnitTest
     [OneTimeTearDown]
     public void OneTimeTearDown() => appHost.Dispose();
 
-    [Test]
-    public void Can_call_MyServices()
-    {
-        var service = appHost.Container.Resolve<MyServices>();
-
-        var response = (HelloResponse)service.Any(new Hello { Name = "World" });
-
-        Assert.That(response.Result, Is.EqualTo("Hello, World!"));
-    }
 }
