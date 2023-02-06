@@ -10,12 +10,12 @@ namespace Signed123.Features.Api.ServiceModel.BiometricCheck
 {
 
     [Route("/mobileServices/REST/mobileControllerServices/authToken", Verbs = "POST")]
-    public class AuthTokenRequest : IApiRequest<AuthTokenRepone>
+    public class AuthTokenRequest : IApiRequest<AuthTokenResponse>
     {
         [JsonProperty("authentication")] public Authentication Authentication { set; get; }
         [JsonProperty("partner")] public Partner Partner { set; get; }
     }
-    public class AuthTokenRepone : IApiResponse
+    public class AuthTokenResponse : IApiResponse
     {
         [JsonProperty("result")] public ResultInfo Result { get; set; }
 

@@ -9,13 +9,13 @@ using System;
 namespace Signed123.Features.Api.ServiceModel.BiometricCheck
 {
     [Route("/mobileServices/REST/mobileControllerServices/regenerateToken", Verbs = "POST")]
-    public class RegenerateTokenRequest : IApiRequest<RegenerateTokenRepone>
+    public class RegenerateTokenRequest : IApiRequest<RegenerateTokenResponse>
     {
         [JsonProperty("authToken")] public string AuthToken { set; get; }
         [JsonProperty("authentication")] public Authentication Authentication { set; get; }
 
     }
-    public class RegenerateTokenRepone : IApiResponse
+    public class RegenerateTokenResponse : IApiResponse
     {
         [JsonProperty("result")] public ResultInfo Result { get; set; }
 
