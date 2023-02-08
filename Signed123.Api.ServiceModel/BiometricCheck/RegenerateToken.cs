@@ -19,10 +19,10 @@ namespace Signed123.Features.Api.ServiceModel.BiometricCheck
     {
         [JsonProperty("result")] public ResultInfo Result { get; set; }
 
+        [JsonProperty("timestamp")]
         [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd hh:mm:ss")]
-        [JsonProperty("timestamp")] public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; set; }
         [JsonProperty("AuthToken")] public string AuthToken { get; set; }
-
         [JsonProperty("loginName")] public string LoginName { get; set; }
     }
 }
