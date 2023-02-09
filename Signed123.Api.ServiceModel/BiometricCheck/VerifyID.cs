@@ -19,7 +19,6 @@ namespace Signed123.Features.Api.ServiceModel.BiometricCheck
         [JsonProperty("partnerId")] public int PartnerId { set; get; }
         [JsonProperty("applicationOwnershipType")] public string ApplicationOwnershipType { set; get; }
         [JsonProperty("customerRegId")] public int CustomerRegId { set; get; }
-
         [JsonProperty("userDetail")] public UserDetail UserDetail { set; get; }
         [JsonProperty("documentDetail")] public DocumentDetail DocumentDetail { set; get; }
 
@@ -33,7 +32,6 @@ namespace Signed123.Features.Api.ServiceModel.BiometricCheck
 
         [JsonConverter(typeof(BooleanConverter))]
         [JsonProperty("isLastNameVerified")] public bool IsLastNameVerified { get; set; }
-
 
         [JsonConverter(typeof(BooleanConverter))]
         [JsonProperty("isDobVerified")] public bool IsDobVerified { get; set; }

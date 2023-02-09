@@ -17,17 +17,15 @@ namespace Signed123.Features.Api.ServiceModel.BiometricCheck.Models
 
         [JsonProperty("user_dob")]
         [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
-        public string UserDob { get; set; }
+        public DateTime UserDob { get; set; }
         [JsonProperty("user_documentId")] public string UserDocumentId { get; set; }
-
-
         [JsonProperty("user_issuingDate")]
         [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
-        public string UserIssuingDate { get; set; }
+        public DateTime UserIssuingDate { get; set; }
 
         [JsonProperty("user_expiryDate")]
         [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
-        public string UserExpiryDate { get; set; }
+        public DateTime UserExpiryDate { get; set; }
 
     }
 }
