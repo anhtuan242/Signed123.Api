@@ -18,16 +18,16 @@ namespace Signed123.Api.ServiceInterface.Services
     {
         private static readonly ILogger Logger = HostContext.Resolve<ILoggerFactory>().CreateLogger(typeof(BaseService));
 
-        protected object ExecuteNuvopayRequest<TRequest, TResponse>(string verb
+        protected object ExecuteBiomatricRequest<TRequest, TResponse>(string verb
                                                                    , string resource
                                                                    , TRequest request) where TRequest : IApiRequest where TResponse : IApiResponse, new() =>
-            ExecuteNuvopayRequestAsync<TRequest, TResponse>(verb, resource, request)
+            ExecuteBiomatricRequestAsync<TRequest, TResponse>(verb, resource, request)
                 .ConfigureAwait(false)
                 .GetAwaiter()
                 .GetResult();
 
 
-        protected async Task<object> ExecuteNuvopayRequestAsync<TRequest, TResponse>(string verb
+        protected async Task<object> ExecuteBiomatricRequestAsync<TRequest, TResponse>(string verb
                                                                                    , string resource
                                                                                    , TRequest request) where TRequest : IApiRequest where TResponse : IApiResponse, new()
         {
@@ -87,7 +87,7 @@ namespace Signed123.Api.ServiceInterface.Services
             catch (Exception e)
             {
                 //await SystemMetricManager.Record<ExceptionMetric>($"#NUVOPAY:{DateTime.UtcNow.ToDateOnly():o}:{request.GetType().Name}", e, new { Request = request, RawRequest = body, Response = responseContent, Resource = resource, Verb = verb }.FlattenToStringDictionary()).ConfigureAwait(false);
-                Logger.LogWarning(e, nameof(ExecuteNuvopayRequestAsync));
+                Logger.LogWarning(e, nameof(ExecuteBiomatricRequestAsync));
                 //e.LogToApplicationInsights();
                 throw;
             }
