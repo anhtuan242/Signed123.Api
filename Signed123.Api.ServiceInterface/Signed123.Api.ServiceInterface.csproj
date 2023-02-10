@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="RestSharp.Serializers.Xml" Version="108.0.3" />
     <PackageReference Include="ServiceStack" Version="6.*" />
   </ItemGroup>
 

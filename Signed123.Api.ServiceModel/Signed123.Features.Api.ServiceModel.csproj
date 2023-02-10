@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="RestSharp.Serializers.Xml" Version="108.0.3" />
     <PackageReference Include="ServiceStack.Interfaces" Version="6.*" />
   </ItemGroup>
 

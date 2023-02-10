@@ -11,8 +11,9 @@
     <ProjectReference Include="..\Signed123.Api.ServiceModel\Signed123.Features.Api.ServiceModel.csproj" />
 
     <PackageReference Include="NUnit" Version="3.13.*" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.1.*" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
+    <PackageReference Include="RestSharp.Serializers.Xml" Version="108.0.3" />
     <PackageReference Include="ServiceStack" Version="6.*" />
     <PackageReference Include="ServiceStack.Kestrel" Version="6.*" />
   </ItemGroup>
